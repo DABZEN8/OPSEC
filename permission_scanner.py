@@ -1,3 +1,5 @@
+import os 
+
 class FileAnalyzer:
     """
     To represent a file meant to be analyzed.
@@ -14,11 +16,23 @@ class FileAnalyzer:
         """
         print(self.filename)
 
+    def file_exists(self):
+        """
+        Function here sees if the file exists at all.
+        """
+        if os.path.exists(self.filename):
+            print("The file is real and exists.")
+        else:
+            print("The file is not real. Does not exist at all.")
+
 
 # Creates an object
 file1 = FileAnalyzer("notepad.txt")
-file2 = FileAnalyzer("shadow.txt")
+file2 = FileAnalyzer("index.html")
 
 # Shows the filename
 file1.show_name()
+file1.file_exists()
+
 file2.show_name()
+file2.file_exists()
