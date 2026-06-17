@@ -21,18 +21,18 @@ class FileAnalyzer:
         Function here sees if the file exists at all.
         """
         if os.path.exists(self.filename):
-            print("The file is real and exists.")
+            return True
         else:
-            print("The file is not real. Does not exist at all.")
+            return False
 
 
 # Creates an object
 file1 = FileAnalyzer("notepad.txt")
-file2 = FileAnalyzer("index.html")
+file2 = FileAnalyzer("find_me.html")
 
 # Shows the filename
 file1.show_name()
-file1.file_exists()
+print(file1.file_exists())
 
 file2.show_name()
-file2.file_exists()
+print(file2.file_exists())
