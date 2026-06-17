@@ -16,7 +16,7 @@ class FileAnalyzer:
         """
         print(self.filename)
 
-    def file_exists(self):
+    def file_exists(self) -> bool:
         """
         Function here sees if the file exists at all.
         """
